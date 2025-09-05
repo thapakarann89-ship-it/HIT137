@@ -51,14 +51,14 @@ def draw_polygonal_koch(sides, side_length, depth):
 
 def main():
     try:
-        sides = int(input("Please enter the number of sides (must be >=3): ").strip())
-        side_length = float(input("Enter the side length (numbers only, >0): ").strip())
-        depth = int(input("Please enter the recursion depth (must be >=0): ").strip())
+        sides = int(input("Please enter the number of sides (must be >=3. (Recommended value for optimum visibility is 3): ").strip())
+        side_length = float(input("Enter the side length (numbers only, >0. (Recommended value for optimum visibility is 300)): ").strip())
+        depth = int(input("Please enter the recursion depth (must be >=0. Recommended value for optimum visibility is 3): ").strip())
     except Exception:
         print("Input is invalid. Values entered must be numeric values only.")
         return
     if sides < 3 or depth < 0 or side_length <= 0:
-        print("Some or all of the input values are invalid. All values must be as follows: sides must be >=3, length must be >0 and depth must be >=0")
+        print("Some or all of the input values are invalid. All values must be as folows: sides must be >=3, length must be >0 and depth must be >=0")
         return
     draw_polygonal_koch(sides, side_length, depth)
 
